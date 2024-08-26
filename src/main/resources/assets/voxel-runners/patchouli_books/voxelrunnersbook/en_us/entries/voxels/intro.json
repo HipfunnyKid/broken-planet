@@ -1,0 +1,12 @@
+
+{
+  "name": "Introduction",
+  "icon": "minecraft:stone_pickaxe",
+  "category": "voxel-runners:voxels",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome to Voxel Runners! This book will take you through the basics and extremes of our server."
+    }
+  ]
+}

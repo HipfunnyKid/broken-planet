@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "voxel-runners",
+	"version": "${version}",
+	"name": "Voxel Runners",
+	"description": "This is a mod for Voxel Runners SMP",
+	"authors": [
+		"HipfunnyKid10",
+		"Viren K Runner"
+	],
+	"contact": {
+		"email": "re9irjfei@gmail.com",
+		"sources": "https://github.com/HipfunnyKid/running-on-voxels"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/voxel-runners/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.scholarsmc.voxelrunners.BookMod"
+		],
+		"fabric-datagen": [
+			"com.scholarsmc.voxelrunners.BookModDataGenerator"
+		]
+	},
+	"mixins": [
+      "voxel-runners.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
