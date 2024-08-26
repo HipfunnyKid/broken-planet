@@ -1,5 +1,5 @@
 {
-  "name": "Voxel Runners",
-  "description": "This is the documentation for the Voxel Runners mod.",
+  "name": "Running on Voxels",
+  "description": "This is the documentation for the Voxel Runners mod, a create mod addon. The mod is intended to be used with the Voxel Runners SMP modpack, but it is not required.",
   "icon": "minecraft:diamond"
 }

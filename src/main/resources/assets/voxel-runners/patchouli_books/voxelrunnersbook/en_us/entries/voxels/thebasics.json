@@ -1,0 +1,11 @@
+{
+  "name": "The basics",
+  "icon": "minecraft:stone_pickaxe",
+  "category": "voxel-runners:voxels",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Running on Voxels consists of various new entities, blocks and items. This chapter will take you through the first steps to playing with the Running on Voxels mod."
+    }
+  ]
+}
