@@ -1,0 +1,15 @@
+{
+  "name": "Title",
+  "icon": "modid:item",
+  "category": "voxel-runners:voxels",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Write text here"
+    },
+    {
+      "type": "patchouli:image",
+      "image": "voxel-runners:textures/gui/entries/IMG_4150.png"
+    }
+  ]
+}
