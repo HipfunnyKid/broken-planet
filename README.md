@@ -1,4 +1,4 @@
-#DEPRECATED - Due to executive decisions, this mod will be on the forge mod loader until further notice
+# DEPRECATED - Due to executive decisions, this mod will be on the forge mod loader until further notice
 
 # Running on Voxels
 
