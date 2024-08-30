@@ -1,8 +1,10 @@
 package com.scholarsmc.voxelrunners;
 
 import com.mojang.logging.LogUtils;
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,6 +31,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(VoxelRunners.MODID)
 public class VoxelRunners
@@ -45,13 +48,15 @@ public class VoxelRunners
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     // New blocks with id "voxelrunners:{blockname}
-    public static final RegistryObject<Block> VOXEL_CASING = BLOCKS.register("voxel_casing", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
+    // public static final RegistryObject<Block> VOXEL_CASING = BLOCKS.register("voxel_casing", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
     // New block items with id "voxelrunners:{blockname}
-    public static final RegistryObject<Item> VOXEL_CASING_ITEM = ITEMS.register("voxel_casing", () -> new BlockItem(VOXEL_CASING.get(), new Item.Properties()));
+    // public static final RegistryObject<Item> VOXEL_CASING_ITEM = ITEMS.register("voxel_casing", () -> new BlockItem(VOXEL_CASING.get(), new Item.Properties()));
 
     // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEat().nutrition(100).saturationMod(100f).build())));
+
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(VoxelRunners.MODID);
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("voxel_runners_tab", () -> CreativeModeTab.builder()
@@ -101,8 +106,8 @@ public class VoxelRunners
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-            event.accept(VOXEL_CASING_ITEM);
+     //   if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+     //       event.accept(VOXEL_CASING_ITEM);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -124,5 +129,8 @@ public class VoxelRunners
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
+    }
+    public static ResourceLocation asResource(String path) {
+        return new ResourceLocation(VoxelRunners.MODID, path);
     }
 }
