@@ -37,11 +37,11 @@ public class VoxelRunnersItemTab {
     private static final DeferredRegister<CreativeModeTab> REGISTER =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, VoxelRunners.MODID);
 
-    public static final RegistryObject<CreativeModeTab> VOXELRUNNERS_CREATIVE_TAB = REGISTER.register("voxelrunners",
+    public static final RegistryObject<CreativeModeTab> VOXELRUNNERS_CREATIVE_TAB = REGISTER.register("voxelrunners_creative_tab",
             () -> CreativeModeTab.builder()
                     .title(Components.translatable("itemGroup.voxelrunners.voxelrunners_creative_tab"))
                     .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
-                    .icon(() -> VoxelRunnersBlocks.voxel_casing.asStack())
+                    .icon(() -> VoxelRunnersBlocks.VOXEL_CASING.asStack())
                     .displayItems(new RegistrateDisplayItemsGenerator(true, VoxelRunnersItemTab.VOXELRUNNERS_CREATIVE_TAB))
                     .build());
 
