@@ -3,12 +3,15 @@
   "id": "voxelrunners",
   "version": "${version}",
   "name": "Voxel Runners",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "The official mod for the Voxel Runners SMP",
   "authors": [
-    "Me!"
+    "FunnyKid10, Viren K Runner, Goatling Being & Dönermann"
   ],
   "contact": {
-    "sources": "https://github.com/Fabricators-of-Create/create-fabric-addon-template"
+    "email": "re9irjfei@gmail.com",
+    "homepage": "https://discord.gg/7RxmcvmdxF",
+    "sources": "https://github.com/HipfunnyKid/running-on-voxels",
+    "issues": "https://github.com/HipfunnyKid/running-on-voxels/issues"
   },
   "license": "MIT",
   "icon": "assets/voxelrunners/icon.png",
@@ -26,5 +29,12 @@
     "fabric-api": ">=${fabric_api_version}",
     "create": "${create_version}",
     "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/k99Kek3YAw"
+      }
+    }
   }
 }

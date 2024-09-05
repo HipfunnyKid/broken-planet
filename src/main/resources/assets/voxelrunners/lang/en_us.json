@@ -1,5 +1,6 @@
 {
   "itemGroup.voxelrunners.voxel_tab": "Voxel Runners",
 
-  "block.voxelrunners.voxel_casing": "Voxel Casing"
+  "block.voxelrunners.voxel_casing": "Voxel Casing",
+  "block.voxelrunners.charred_log": "Charred Log"
 }
