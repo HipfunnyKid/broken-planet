@@ -247,6 +247,7 @@ public class VoxelRunnersItemTab {
 
 			List<Item> items = new LinkedList<>();
 			if (addItems) {
+				items.add(VoxelRunnersBlocks.VOXEL_CASING.asItem());
 				items.addAll(collectItems(exclusionPredicate.or(IS_ITEM_3D_PREDICATE.negate())));
 			}
 			items.addAll(collectBlocks(exclusionPredicate));
