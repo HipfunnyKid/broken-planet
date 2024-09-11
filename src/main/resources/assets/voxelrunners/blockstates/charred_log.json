@@ -1,5 +1,16 @@
 {
   "variants": {
-    "model": "voxelrunners:block/charred_log"
+    "axis=x": {
+      "model": "voxelrunners:block/charred_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "voxelrunners:block/charred_log"
+    },
+    "axis=z": {
+      "model": "voxelrunners:block/charred_log_horizontal",
+      "x": 90
+    }
   }
 }

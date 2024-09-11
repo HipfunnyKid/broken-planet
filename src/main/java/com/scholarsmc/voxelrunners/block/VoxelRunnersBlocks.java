@@ -63,6 +63,7 @@ import static com.simibubi.create.foundation.data.TagGen.pickaxeOnly;
 import static com.simibubi.create.foundation.data.TagGen.tagBlockAndItem;
 import static net.minecraft.core.Direction.Axis.CODEC;
 import static net.minecraft.world.level.block.Block.byItem;
+import static net.minecraft.world.level.block.Blocks.WHITE_CONCRETE;
 import static net.minecraft.world.level.block.Blocks.log;
 import static net.minecraft.world.level.block.DirectionalBlock.FACING;
 
@@ -85,7 +86,7 @@ public class VoxelRunnersBlocks {
 		.build()
 		.register();
 
-	public static final BlockEntry<Block> CHARRED_LOG = REGISTRATE.block("charred_log", Block::new)
+	public static final BlockEntry<RotatedPillarBlock> CHARRED_LOG = REGISTRATE.block("charred_log", RotatedPillarBlock::new)
 			.properties(p -> p.mapColor(MapColor.WOOD)
 					.requiresCorrectToolForDrops()
 					.sound(SoundType.BASALT))
@@ -94,5 +95,26 @@ public class VoxelRunnersBlocks {
 			.tab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key())
 			.build()
 			.register();
+
+	public static final BlockEntry<Block> SHIP_BLOCK = REGISTRATE.block("ship_block", Block::new)
+			.properties(p -> p.mapColor(MapColor.TERRACOTTA_WHITE)
+					.requiresCorrectToolForDrops()
+					.sound(SoundType.STONE)
+					.noOcclusion())
+			.item()
+			.tab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key())
+			.build()
+			.register();
+
+	public static final BlockEntry<Block> SHIP_HOLOGRAM = REGISTRATE.block("ship_hologram", Block::new)
+			.properties(p -> p.mapColor(MapColor.TERRACOTTA_WHITE)
+					.requiresCorrectToolForDrops()
+					.sound(SoundType.STONE)
+					.noOcclusion())
+			.item()
+			.tab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key())
+			.build()
+			.register();
+
 	public static void register() {}
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "voxelrunners:block/ship_block"
+    }
+  }
+}

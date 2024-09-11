@@ -2,5 +2,7 @@
   "itemGroup.voxelrunners.voxel_tab": "Voxel Runners",
 
   "block.voxelrunners.voxel_casing": "Voxel Casing",
-  "block.voxelrunners.charred_log": "Charred Log"
+  "block.voxelrunners.charred_log": "Charred Log",
+  "block.voxelrunners.ship_block": "Ship Model",
+  "block.voxelrunners.ship_hologram": "Ship Hologram"
 }

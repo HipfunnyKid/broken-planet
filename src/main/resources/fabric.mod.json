@@ -13,12 +13,15 @@
     "sources": "https://github.com/HipfunnyKid/running-on-voxels",
     "issues": "https://github.com/HipfunnyKid/running-on-voxels/issues"
   },
-  "license": "MIT",
+  "license": "Custom",
   "icon": "assets/voxelrunners/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
       "com.scholarsmc.voxelrunners.VoxelRunners"
+    ],
+    "client": [
+      "com.scholarsmc.voxelrunners.VoxelRunnersClient"
     ]
   },
   "mixins": [
