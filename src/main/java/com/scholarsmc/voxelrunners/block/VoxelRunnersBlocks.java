@@ -9,6 +9,7 @@ import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
+import io.github.fabricators_of_create.porting_lib.models.virtual.TranslucentBakedModel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
@@ -24,6 +25,7 @@ import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.CandleBlock;
 import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.ShulkerBoxBlock;
@@ -106,11 +108,12 @@ public class VoxelRunnersBlocks {
 			.build()
 			.register();
 
-	public static final BlockEntry<Block> SHIP_HOLOGRAM = REGISTRATE.block("ship_hologram", Block::new)
+	public static final BlockEntry<GlassBlock> SHIP_HOLOGRAM = REGISTRATE.block("ship_hologram", GlassBlock::new)
 			.properties(p -> p.mapColor(MapColor.TERRACOTTA_WHITE)
 					.requiresCorrectToolForDrops()
 					.sound(SoundType.STONE)
-					.noOcclusion())
+					.noOcclusion()
+					.lightLevel(state -> 8))
 			.item()
 			.tab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key())
 			.build()
