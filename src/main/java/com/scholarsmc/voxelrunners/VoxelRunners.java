@@ -48,6 +48,7 @@ public class VoxelRunners implements ModInitializer {
 				() -> () -> "{} is accessing Porting Lib from the client!",
 				() -> () -> "{} is accessing Porting Lib from the server!"
 		), NAME);
+		VoxelRunnersPartialModels.init();
 		VoxelRunnersBlocks.register();
 		VoxelRunnersItemTab.register();
 		VoxelRunnersItems.register();

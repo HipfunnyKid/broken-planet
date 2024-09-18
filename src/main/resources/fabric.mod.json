@@ -19,6 +19,7 @@
   "entrypoints": {
     "main": [
       "com.scholarsmc.voxelrunners.VoxelRunners"
+
     ],
     "client": [
       "com.scholarsmc.voxelrunners.VoxelRunnersClient"
@@ -31,7 +32,8 @@
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
     "create": "${create_version}",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "fabric-language-kotlin": ">=1.12.1+kotlin.2.0.20"
   },
   "custom": {
     "modmenu": {

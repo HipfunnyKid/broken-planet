@@ -70,10 +70,6 @@ import static net.minecraft.world.level.block.Blocks.log;
 import static net.minecraft.world.level.block.DirectionalBlock.FACING;
 
 public class VoxelRunnersBlocks {
-	static {
-		REGISTRATE.setCreativeTab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key());
-	}
-
 //	public static final BlockEntry<CasingBlock> VOXEL_CASING = REGISTRATE.block("voxel_casing", CasingBlock::new)
 //			.properties(p -> p.mapColor(MapColor.PODZOL))
 //			.transform(BuilderTransformers.casing(() -> VoxelRunnersSpriteShifts.VOXEL_CASING))

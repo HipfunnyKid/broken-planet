@@ -1,0 +1,97 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "voxelrunners:item/gas_mask",
+		"particle": "voxelrunners:item/gas_mask"
+	},
+	"elements": [
+		{
+			"from": [6, 0.44081, 4.21299],
+			"to": [10, 4.44081, 8.21299],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 1.94186, 6.46456]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#0"},
+				"east": {"uv": [0, 4, 4, 8], "texture": "#0"},
+				"south": {"uv": [4, 0, 8, 4], "texture": "#0"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#0"},
+				"up": {"uv": [4, 12, 0, 8], "texture": "#0"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, -0.05709, 5.21612],
+			"to": [6, 2.94291, 8.21612],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 1.94186, 6.46456]},
+			"faces": {
+				"north": {"uv": [4, 8, 6, 11], "texture": "#0"},
+				"east": {"uv": [4, 8, 7, 11], "texture": "#0"},
+				"south": {"uv": [4, 8, 6, 11], "texture": "#0"},
+				"west": {"uv": [4, 8, 7, 11], "texture": "#0"},
+				"up": {"uv": [4, 8, 6, 11], "texture": "#0"},
+				"down": {"uv": [4, 8, 6, 11], "texture": "#0"}
+			}
+		},
+		{
+			"from": [10, -0.05709, 5.21612],
+			"to": [12, 2.94291, 8.21612],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, 1.94186, 6.46456]},
+			"faces": {
+				"north": {"uv": [4, 8, 6, 11], "texture": "#0"},
+				"east": {"uv": [4, 8, 7, 11], "texture": "#0"},
+				"south": {"uv": [4, 8, 6, 11], "texture": "#0"},
+				"west": {"uv": [4, 8, 7, 11], "texture": "#0"},
+				"up": {"uv": [4, 8, 6, 11], "texture": "#0"},
+				"down": {"uv": [4, 8, 6, 11], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 2, 6],
+			"to": [11, 5, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 3, 0]},
+			"faces": {
+				"north": {"uv": [6, 0, 12, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 3, 3], "texture": "#0"},
+				"south": {"uv": [0, 4, 6, 7], "texture": "#0"},
+				"west": {"uv": [4, 1, 7, 4], "texture": "#0"},
+				"up": {"uv": [0, 2, 6, 5], "texture": "#0"},
+				"down": {"uv": [0, 3, 6, 6], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 4.5, 0]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 4.5, 0]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 5.5, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 5.5, 0]
+		},
+		"ground": {
+			"translation": [0, 5.75, 0]
+		},
+		"gui": {
+			"rotation": [24, 130, 0],
+			"translation": [1.25, 5, 0]
+		},
+		"head": {
+			"translation": [0, 1.75, -5],
+			"scale": [1.23, 1.23, 1.23]
+		},
+		"fixed": {
+			"translation": [0, 3.5, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "Mask",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

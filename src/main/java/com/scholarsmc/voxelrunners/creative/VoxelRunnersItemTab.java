@@ -75,6 +75,13 @@ public class VoxelRunnersItemTab {
 					.displayItems(new RegistrateDisplayItemsGenerator(true, () -> VoxelRunnersItemTab.VOXEL_RUNNERS_TAB))
 					.build());
 
+//	public static final TabInfo VOXEL_RUNNERS_DECOR_TAB = register("voxel_decor_tab",
+//			() -> FabricItemGroup.builder()
+//					.title(Components.translatable("itemGroup.voxelrunners.voxel_decor_tab"))
+//					.icon(() -> VoxelRunnersBlocks.SHIP_BLOCK.asStack(1))
+//					.displayItems(new RegistrateDisplayItemsGenerator(true, () -> VoxelRunnersItemTab.VOXEL_RUNNERS_DECOR_TAB))
+//					.build());
+
 
 	private static TabInfo register(String name, Supplier<CreativeModeTab> supplier) {
 		ResourceLocation id = Create.asResource(name);

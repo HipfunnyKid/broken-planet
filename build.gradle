@@ -5,10 +5,9 @@ plugins {
 	id "fabric-loom" version "1.5.+"
 	id "io.github.p03w.machete" version "1.+" // automatic jar compressing on build
 	id "maven-publish"
+	id 'org.jetbrains.kotlin.jvm'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
 group = project.maven_group
@@ -30,7 +29,9 @@ repositories {
 	maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" } // Forge Config API Port
 	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" } // Reach Entity Attributes
 	maven { url = "https://jitpack.io/" } // Mixin Extras, Fabric ASM
-	maven { url = "https://maven.tterrag.com/" } // Flywheel
+	maven { url = "https://maven.tterrag.com/" }
+	maven { url = "https://maven.teamresourceful.com/repository/maven-public/"}
+	mavenCentral() // Flywheel
 }
 
 configurations.configureEach {
@@ -52,6 +53,9 @@ dependencies {
 	// dependencies
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_api_version}")
 
+	// Kotlin
+	modImplementation("net.fabricmc:fabric-language-kotlin:1.12.1+kotlin.2.0.20")
+
 	// Create - dependencies are added transitively
 	modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:${create_version}")
 
@@ -61,9 +65,10 @@ dependencies {
 	modImplementation("foundry.veil:Veil-fabric-${project.minecraft_version}:${project.veil_version}") {
 		exclude group: "maven.modrinth"
 	}
+	//modImplementation(group = "earth.terrarium.adastra", name = "ad_astra-${mod_loader}-${minecraft_version}",version = 1.15.18)
 
 
-	// Recipe Viewers - Create Fabric supports JEI, REI, and EMI.
+// Recipe Viewers - Create Fabric supports JEI, REI, and EMI.
 	// See root gradle.properties to choose which to use at runtime.
 	switch (recipe_viewer.toLowerCase(Locale.ROOT)) {
 		case "jei": modLocalRuntime("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"); break
@@ -72,6 +77,7 @@ dependencies {
 		case "disabled": break
 		default: println("Unknown recipe viewer specified: ${recipe_viewer}. Must be JEI, REI, EMI, or disabled.")
 	}
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 	// if you would like to add integration with them, uncomment them here.
 //    modCompileOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_fabric_version}")
 //    modCompileOnly("mezz.jei:jei-${minecraft_version}-common:${jei_fabric_version}")
@@ -130,4 +136,7 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+kotlin {
+	jvmToolchain(17)
 }
