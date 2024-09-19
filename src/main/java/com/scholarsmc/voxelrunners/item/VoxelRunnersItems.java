@@ -9,9 +9,15 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.PlayerHeadItem;
 import net.minecraft.world.item.Rarity;
 
@@ -29,12 +35,6 @@ public class VoxelRunnersItems {
 
 	public static final ItemEntry<GogglesItem> GAS_MASK = REGISTRATE.item("gas_mask", GogglesItem::new)
 			.properties(p -> p.stacksTo(1))
-			.properties(p -> {
-				if (p instanceof FabricItemSettings fp) {
-					fp.equipmentSlot(GogglesItem::getEquipmentSlot);
-				}
-				return p;
-			})
 			.tab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key())
 			.onRegister(CreateRegistrate.itemModel(() -> GasMaskModel::new))
 			.lang("Gas Mask")
@@ -45,7 +45,6 @@ public class VoxelRunnersItems {
 //					.saturationMod(0.8F)
 //					.build()))
 //			.register();
-
 	public static void register() {}
 
 }

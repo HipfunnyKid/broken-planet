@@ -18,6 +18,7 @@ String buildNumber = System.getenv("GITHUB_RUN_NUMBER")
 version = "${mod_version}+${minecraft_version}" + (buildNumber != null ? "-${buildNumber}" : "")
 
 repositories {
+	maven { url = "https://maven.teamresourceful.com/repository/maven-public/"}
 	maven { url = "https://maven.shedaniel.me/" } // Cloth Config, REI
 	maven { url = "https://maven.blamejared.com/" } // JEI
 	maven { url = "https://maven.parchmentmc.org" } // Parchment mappings
@@ -53,6 +54,7 @@ dependencies {
 	// dependencies
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${fabric_api_version}")
 
+	modImplementation("earth.terrarium.adastra:ad_astra-fabric-${minecraft_version}:${adastra_version}")
 	// Kotlin
 	modImplementation("net.fabricmc:fabric-language-kotlin:1.12.1+kotlin.2.0.20")
 
@@ -131,10 +133,7 @@ publishing {
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
+		maven { url = "https://maven.blamejared.com/" }
 	}
 }
 kotlin {
