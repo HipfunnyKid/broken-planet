@@ -7,7 +7,6 @@ import com.simibubi.create.content.equipment.goggles.GogglesItem;
 import com.simibubi.create.content.equipment.goggles.GogglesModel;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -20,7 +19,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.PlayerHeadItem;
 import net.minecraft.world.item.Rarity;
-
 import static com.simibubi.create.AllTags.forgeItemTag;
 import static com.simibubi.create.AllTags.AllItemTags.CREATE_INGOTS;
 import static com.simibubi.create.AllTags.AllItemTags.CRUSHED_RAW_MATERIALS;
@@ -35,6 +33,7 @@ public class VoxelRunnersItems {
 
 	public static final ItemEntry<GogglesItem> GAS_MASK = REGISTRATE.item("gas_mask", GogglesItem::new)
 			.properties(p -> p.stacksTo(1))
+			.tag()
 			.tab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key())
 			.onRegister(CreateRegistrate.itemModel(() -> GasMaskModel::new))
 			.lang("Gas Mask")
