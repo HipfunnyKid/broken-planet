@@ -33,6 +33,12 @@ public class VoxelRunnersItems {
 
 	public static final ItemEntry<GogglesItem> GAS_MASK = REGISTRATE.item("gas_mask", GogglesItem::new)
 			.properties(p -> p.stacksTo(1))
+			.properties(p -> {
+				if (p instanceof FabricItemSettings fp) {
+					fp.equipmentSlot(GogglesItem::getEquipmentSlot);
+				}
+				return p;
+			})
 			.tag()
 			.tab(VoxelRunnersItemTab.VOXEL_RUNNERS_TAB.key())
 			.onRegister(CreateRegistrate.itemModel(() -> GasMaskModel::new))

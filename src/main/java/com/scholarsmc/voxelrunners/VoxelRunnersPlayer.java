@@ -21,17 +21,17 @@ import net.minecraft.world.level.Level;
 public abstract class VoxelRunnersPlayer extends Player {
 
 	public void tick(){
-		this.gasMaskTick();
+//		this.gasMaskTick();
 	}
 
 	public VoxelRunnersPlayer(Level level, BlockPos pos, float yRot, GameProfile gameProfile) {
 		super(level, pos, yRot, gameProfile);
 	}
 
-	private void gasMaskTick() {
-		ItemStack itemStack = this.getItemBySlot(EquipmentSlot.HEAD);
-		if (itemStack.is(VoxelRunnersItems.GAS_MASK.asItem()) && !this.isEyeInFluid(FluidTags.WATER)) {
-			this.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));
-		}
-	}
+//	private void gasMaskTick() {
+//		ItemStack itemStack = this.getItemBySlot(EquipmentSlot.HEAD);
+//		if (itemStack.is(VoxelRunnersItems.GAS_MASK.asItem()) && !this.isEyeInFluid(FluidTags.WATER)) {
+//			this.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));
+//		}
+//	}
 }
