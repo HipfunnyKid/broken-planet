@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "voxelrunners",
-  "version": "${version}",
+  "version": "0.0.4-dev",
   "name": "Voxel Runners",
   "description": "The official mod for the Voxel Runners SMP",
   "authors": [
