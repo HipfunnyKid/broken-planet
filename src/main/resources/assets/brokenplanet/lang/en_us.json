@@ -1,0 +1,11 @@
+{
+  "itemGroup.brokenplanet.voxel_tab": "Voxel Runners",
+  "itemGroup.brokenplanet.voxel_decor_tab": "Voxel Runners Decor",
+
+  "block.brokenplanet.voxel_casing": "Voxel Casing",
+  "block.brokenplanet.charred_log": "Charred Log",
+  "block.brokenplanet.ship_block": "Ship Model",
+  "block.brokenplanet.ship_hologram": "Ship Hologram",
+
+  "item.brokenplanet.gas_mask": "Gas Mask"
+}

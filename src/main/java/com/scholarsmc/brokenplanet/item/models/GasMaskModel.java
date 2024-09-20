@@ -1,8 +1,7 @@
-package com.scholarsmc.voxelrunners.item.models;
+package com.scholarsmc.brokenplanet.item.models;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.scholarsmc.voxelrunners.VoxelRunners;
-import com.scholarsmc.voxelrunners.VoxelRunnersPartialModels;
+import com.scholarsmc.brokenplanet.BrokenPlanetPartialModels;
 
 import io.github.fabricators_of_create.porting_lib.models.TransformTypeDependentItemBakedModel;
 import net.fabricmc.fabric.api.renderer.v1.model.ForwardingBakedModel;
@@ -19,7 +18,7 @@ public class GasMaskModel extends ForwardingBakedModel implements TransformTypeD
 	@Override
 	public BakedModel applyTransform(ItemDisplayContext cameraItemDisplayContext, PoseStack mat, boolean leftHanded, DefaultTransform defaultTransform) {
 		if (cameraItemDisplayContext == ItemDisplayContext.HEAD) {
-			BakedModel headGoggles = VoxelRunnersPartialModels.GAS_MASK.get();
+			BakedModel headGoggles = BrokenPlanetPartialModels.GAS_MASK.get();
 			defaultTransform.apply(headGoggles);
 			return headGoggles;
 		}

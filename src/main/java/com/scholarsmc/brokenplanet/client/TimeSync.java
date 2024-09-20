@@ -1,4 +1,4 @@
-package com.scholarsmc.voxelrunners.client;
+package com.scholarsmc.brokenplanet.client;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.multiplayer.ClientChunkCache;
@@ -11,9 +11,7 @@ import java.util.Calendar;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
-import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.client.renderer.LevelRenderer;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.CubicSampler;

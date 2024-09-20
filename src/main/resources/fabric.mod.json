@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "id": "voxelrunners",
-  "version": "0.0.4-dev",
+  "id": "brokenplanet",
+  "version": "0.0.5-dev",
   "name": "Voxel Runners",
   "description": "The official mod for the Voxel Runners SMP",
   "authors": [
@@ -14,19 +14,19 @@
     "issues": "https://github.com/HipfunnyKid/running-on-voxels/issues"
   },
   "license": "Custom",
-  "icon": "assets/voxelrunners/icon.png",
+  "icon": "assets/brokenplanet/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.scholarsmc.voxelrunners.VoxelRunners"
+      "com.scholarsmc.brokenplanet.BrokenPlanet"
 
     ],
     "client": [
-      "com.scholarsmc.voxelrunners.VoxelRunnersClient"
+      "com.scholarsmc.brokenplanet.BrokenPlanetClient"
     ]
   },
   "mixins": [
-    "voxelrunners.mixins.json"
+    "brokenplanet.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",

@@ -1,14 +1,11 @@
-package com.scholarsmc.voxelrunners;
-
-import com.scholarsmc.voxelrunners.block.VoxelRunnersBlocks;
+package com.scholarsmc.brokenplanet;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 
 @Environment(EnvType.CLIENT)
-public class VoxelRunnersClient implements ClientModInitializer {
+public class BrokenPlanetClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		// To make some parts of the block transparent (like glass, saplings and doors):
 		//BlockRenderLayerMap.INSTANCE.putBlock(VoxelRunnersBlocks.SHIP_HOLOGRAM, RenderLayer.getCutout());

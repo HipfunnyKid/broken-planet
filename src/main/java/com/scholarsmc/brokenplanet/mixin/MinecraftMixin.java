@@ -1,8 +1,8 @@
-package com.scholarsmc.voxelrunners.mixin;
+package com.scholarsmc.brokenplanet.mixin;
 
 
 
-import com.scholarsmc.voxelrunners.VoxelRunners;
+import com.scholarsmc.brokenplanet.BrokenPlanet;
 
 import net.minecraft.client.Minecraft;
 
@@ -17,6 +17,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MinecraftMixin {
 	@Inject(method = "<init>", at = @At("TAIL"))
 	private void example$init(GameConfig gameConfig, CallbackInfo ci) {
-		VoxelRunners.LOGGER.info("Hello from {}", VoxelRunners.NAME);
+		BrokenPlanet.LOGGER.info("Hello from {}", BrokenPlanet.NAME);
 	}
 }

@@ -1,4 +1,4 @@
-package com.scholarsmc.voxelrunners.creative;
+package com.scholarsmc.brokenplanet.creative;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -8,27 +8,16 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import com.scholarsmc.voxelrunners.block.VoxelRunnersBlocks;
-import com.simibubi.create.AllBlocks;
+import com.scholarsmc.brokenplanet.block.BrokenPlanetBlocks;
 
-import com.simibubi.create.AllCreativeModeTabs;
-
-import com.simibubi.create.AllItems;
 import com.simibubi.create.Create;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
 
 import org.apache.commons.lang3.mutable.MutableObject;
 
-import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
-import com.simibubi.create.content.decoration.palettes.AllPaletteBlocks;
-import com.simibubi.create.content.equipment.armor.BacktankUtil;
-import com.simibubi.create.content.equipment.toolbox.ToolboxBlock;
-import com.simibubi.create.content.kinetics.crank.ValveHandleBlock;
-import com.scholarsmc.voxelrunners.VoxelRunners;
 import com.simibubi.create.foundation.item.TagDependentIngredientItem;
 import com.simibubi.create.foundation.utility.Components;
-import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import com.tterrag.registrate.util.entry.RegistryEntry;
@@ -48,7 +37,6 @@ import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -57,29 +45,25 @@ import net.minecraft.world.item.CreativeModeTab.DisplayItemsGenerator;
 import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters;
 import net.minecraft.world.item.CreativeModeTab.Output;
 import net.minecraft.world.item.CreativeModeTab.TabVisibility;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.levelgen.feature.TreeFeature;
 
-import org.apache.commons.lang3.mutable.MutableObject;
+public class BrokenPlanetItemTab {
 
-public class VoxelRunnersItemTab {
-
-	public static final TabInfo VOXEL_RUNNERS_TAB = register("voxel_tab",
+	public static final TabInfo BROKEN_PLANET_TAB = register("voxel_tab",
 			() -> FabricItemGroup.builder()
-					.title(Components.translatable("itemGroup.voxelrunners.voxel_tab"))
-					.icon(() -> VoxelRunnersBlocks.VOXEL_CASING.asStack(1))
-					.displayItems(new RegistrateDisplayItemsGenerator(true, () -> VoxelRunnersItemTab.VOXEL_RUNNERS_TAB))
+					.title(Components.translatable("itemGroup.brokenplanet.voxel_tab"))
+					.icon(() -> BrokenPlanetBlocks.VOXEL_CASING.asStack(1))
+					.displayItems(new RegistrateDisplayItemsGenerator(true, () -> BrokenPlanetItemTab.BROKEN_PLANET_TAB))
 					.build());
 
 //	public static final TabInfo VOXEL_RUNNERS_DECOR_TAB = register("voxel_decor_tab",
 //			() -> FabricItemGroup.builder()
-//					.title(Components.translatable("itemGroup.voxelrunners.voxel_decor_tab"))
-//					.icon(() -> VoxelRunnersBlocks.SHIP_BLOCK.asStack(1))
-//					.displayItems(new RegistrateDisplayItemsGenerator(true, () -> VoxelRunnersItemTab.VOXEL_RUNNERS_DECOR_TAB))
+//					.title(Components.translatable("itemGroup.brokenplanet.voxel_decor_tab"))
+//					.icon(() -> brokenplanetBlocks.SHIP_BLOCK.asStack(1))
+//					.displayItems(new RegistrateDisplayItemsGenerator(true, () -> brokenplanetItemTab.VOXEL_RUNNERS_DECOR_TAB))
 //					.build());
 
 
@@ -254,7 +238,7 @@ public class VoxelRunnersItemTab {
 
 			List<Item> items = new LinkedList<>();
 			if (addItems) {
-				items.add(VoxelRunnersBlocks.VOXEL_CASING.asItem());
+				items.add(BrokenPlanetBlocks.VOXEL_CASING.asItem());
 				items.addAll(collectItems(exclusionPredicate.or(IS_ITEM_3D_PREDICATE.negate())));
 			}
 			items.addAll(collectBlocks(exclusionPredicate));

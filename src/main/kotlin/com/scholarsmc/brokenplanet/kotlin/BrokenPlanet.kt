@@ -2,7 +2,7 @@ package com.scholarmc.voxelrunners
 
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
-object VoxelRunners : ModInitializer {
+object BrokenPlanet : ModInitializer {
     private val logger = LoggerFactory.getLogger("voxelrunners")
 
 	override fun onInitialize() {

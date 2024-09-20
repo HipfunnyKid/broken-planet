@@ -1,10 +1,10 @@
-package com.scholarsmc.voxelrunners;
+package com.scholarsmc.brokenplanet;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.scholarsmc.voxelrunners.block.VoxelRunnersBlocks;
-import com.scholarsmc.voxelrunners.creative.VoxelRunnersItemTab;
-import com.scholarsmc.voxelrunners.item.VoxelRunnersItems;
+import com.scholarsmc.brokenplanet.block.BrokenPlanetBlocks;
+import com.scholarsmc.brokenplanet.creative.BrokenPlanetItemTab;
+import com.scholarsmc.brokenplanet.item.BrokenPlanetItems;
 import com.simibubi.create.Create;
 
 import com.simibubi.create.foundation.data.CreateRegistrate;
@@ -17,7 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class VoxelRunners implements ModInitializer {
+public class BrokenPlanet implements ModInitializer {
 	public static final String ID = "voxelrunners";
 	public static final String NAME = "Voxel Runners";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
@@ -38,16 +38,16 @@ public class VoxelRunners implements ModInitializer {
 				() -> () -> "{} is accessing Porting Lib from the client!",
 				() -> () -> "{} is accessing Porting Lib from the server!"
 		), NAME);
-		VoxelRunnersPartialModels.init();
-		VoxelRunnersBlocks.register();
-		VoxelRunnersItemTab.register();
-		VoxelRunnersItems.register();
+		BrokenPlanetPartialModels.init();
+		BrokenPlanetBlocks.register();
+		BrokenPlanetItemTab.register();
+		BrokenPlanetItems.register();
 		REGISTRATE.register();
 
 	}
 
 	public static ResourceLocation asResource(String path) {
-		return new ResourceLocation(VoxelRunners.ID, path);
+		return new ResourceLocation(BrokenPlanet.ID, path);
 	}
 
 	public static ResourceLocation id(String path) {
