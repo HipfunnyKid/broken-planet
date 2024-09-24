@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "brokenplanet",
   "version": "0.0.5-dev",
-  "name": "Voxel Runners",
+  "name": "Broken Planet",
   "description": "The official mod for the Voxel Runners SMP",
   "authors": [
     "FunnyKid10, Viren K Runner, Goatling Being & Dönermann"
@@ -10,8 +10,8 @@
   "contact": {
     "email": "re9irjfei@gmail.com",
     "homepage": "https://discord.gg/7RxmcvmdxF",
-    "sources": "https://github.com/HipfunnyKid/running-on-voxels",
-    "issues": "https://github.com/HipfunnyKid/running-on-voxels/issues"
+    "sources": "https://github.com/HipfunnyKid/broken-planet",
+    "issues": "https://github.com/HipfunnyKid/broken-planet/issues"
   },
   "license": "Custom",
   "icon": "assets/brokenplanet/icon.png",

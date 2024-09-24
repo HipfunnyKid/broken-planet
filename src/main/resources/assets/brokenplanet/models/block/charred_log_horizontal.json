@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column_horizontal",
   "textures": {
-    "end": "voxelrunners:block/charred_log_top",
-    "side": "voxelrunners:block/charred_log_side"
+    "end": "brokenplanet:block/charred_log_top",
+    "side": "brokenplanet:block/charred_log_side"
   }
 }

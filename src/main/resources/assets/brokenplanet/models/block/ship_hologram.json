@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "voxelrunners:block/station_block_hologram",
-		"particle": "voxelrunners:block/station_block_hologram"
+		"0": "brokenplanet:block/station_block_hologram",
+		"particle": "brokenplanet:block/station_block_hologram"
 	},
 	"elements": [
 		{

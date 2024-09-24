@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "voxelrunners:block/voxel_casing"
+    "all": "brokenplanet:block/voxel_casing"
   }
 }

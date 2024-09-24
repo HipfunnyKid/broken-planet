@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "voxelrunners:item/gas_mask",
-		"particle": "voxelrunners:item/gas_mask"
+		"0": "brokenplanet:item/gas_mask",
+		"particle": "brokenplanet:item/gas_mask"
 	},
 	"elements": [
 		{

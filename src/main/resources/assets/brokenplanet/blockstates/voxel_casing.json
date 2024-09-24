@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "voxelrunners:block/voxel_casing"
+      "model": "brokenplanet:block/voxel_casing"
     }
   }
 }

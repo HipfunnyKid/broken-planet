@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"3": "voxelrunners:block/ship_block",
-		"particle": "voxelrunners:block/ship_block"
+		"3": "brokenplanet:block/ship_block",
+		"particle": "brokenplanet:block/ship_block"
 	},
 	"elements": [
 		{

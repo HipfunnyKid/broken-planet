@@ -18,8 +18,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class BrokenPlanet implements ModInitializer {
-	public static final String ID = "voxelrunners";
-	public static final String NAME = "Voxel Runners";
+	public static final String ID = "brokenplanet";
+	public static final String NAME = "Broken Planet";
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
 	public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID);
