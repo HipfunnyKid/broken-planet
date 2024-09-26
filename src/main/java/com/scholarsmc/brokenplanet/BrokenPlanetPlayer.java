@@ -11,15 +11,21 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class BrokenPlanetPlayer extends Player {
+	private static final Logger log = LoggerFactory.getLogger(BrokenPlanetPlayer.class);
+
 	public BrokenPlanetPlayer(Level level, BlockPos pos, float yRot, GameProfile gameProfile) {
 		super(level, pos, yRot, gameProfile);
 	}
 	@Override
 	public void tick() {
-		gasMaskTick();
+
 	}
 	public boolean isSpectator() {
 		return false;
@@ -29,9 +35,9 @@ public class BrokenPlanetPlayer extends Player {
 		return false;
 	}
 
-	private void gasMaskTick() {
+	private void turtleHelmetTick() {
 		ItemStack itemStack = this.getItemBySlot(EquipmentSlot.HEAD);
-		if (itemStack.is(BrokenPlanetItems.GAS_MASK.asItem())) {
+		if (itemStack.is(BrokenPlanetItems.GAS_MASK.asItem()) && !this.isEyeInFluid(FluidTags.WATER)) {
 			this.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));
 		}
 	}
