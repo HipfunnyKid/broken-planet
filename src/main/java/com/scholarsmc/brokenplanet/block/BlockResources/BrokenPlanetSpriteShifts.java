@@ -16,8 +16,8 @@ public class BrokenPlanetSpriteShifts {
 
 
 
-	private static CTSpriteShiftEntry omni(String name) {
-		return getCT(AllCTTypes.OMNIDIRECTIONAL, name);
+	private static CTSpriteShiftEntry omni() {
+		return getCT(AllCTTypes.OMNIDIRECTIONAL, "voxel_casing");
 	}
 
 	private static CTSpriteShiftEntry horizontal(String name) {
@@ -54,7 +54,7 @@ public class BrokenPlanetSpriteShifts {
 	}
 
 	static {
-		VOXEL_CASING = omni("voxel_casing");
+		VOXEL_CASING = omni();
 	}
 
 	public static void register(){}

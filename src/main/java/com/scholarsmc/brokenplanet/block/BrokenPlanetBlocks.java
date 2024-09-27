@@ -7,25 +7,15 @@ import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.BuilderTransformers;
 import com.tterrag.registrate.util.entry.BlockEntry;
 
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.commands.PerfCommand;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CommandBlock;
 import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.MapColor;
 
 import static com.scholarsmc.brokenplanet.BrokenPlanet.REGISTRATE;
-import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
-import static com.simibubi.create.foundation.data.ModelGen.customItemModel;
-import static net.minecraft.world.level.block.Blocks.log;
 
 public class BrokenPlanetBlocks {
-//	public static final BlockEntry<CasingBlock> VOXEL_CASING = REGISTRATE.block("voxel_casing", CasingBlock::new)
-//			.properties(p -> p.mapColor(MapColor.PODZOL))
-//			.transform(BuilderTransformers.casing(() -> VoxelRunnersSpriteShifts.VOXEL_CASING))
-//			.register();
 	public static final BlockEntry<CasingBlock> VOXEL_CASING = REGISTRATE.block("voxel_casing", CasingBlock::new)
 		.properties(p -> p.mapColor(MapColor.COLOR_ORANGE)
 				.requiresCorrectToolForDrops()

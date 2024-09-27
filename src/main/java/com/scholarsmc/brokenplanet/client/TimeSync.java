@@ -1,9 +1,4 @@
 package com.scholarsmc.brokenplanet.client;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.minecraft.client.multiplayer.ClientChunkCache;
-import net.minecraft.client.multiplayer.ClientLevel;
-import net.minecraft.client.multiplayer.ClientPacketListener;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
@@ -11,6 +6,13 @@ import java.util.Calendar;
 import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
+import org.jetbrains.annotations.NotNull;
+
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.minecraft.client.multiplayer.ClientChunkCache;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
@@ -55,7 +57,7 @@ public class TimeSync extends ClientLevel {
 	/**
 	 * Runs a single tick for the world
 	 */
-	public void tick(BooleanSupplier hasTimeLeft) {
+	public void tick(@NotNull BooleanSupplier hasTimeLeft) {
 		this.getWorldBorder().tick();
 		this.tickTime();
 		if (this.skyFlashTime > 0) {
@@ -97,7 +99,7 @@ public class TimeSync extends ClientLevel {
 		return (g *= 1.0f - this.getThunderLevel(partialTick) * 5.0f / 16.0f) * 0.8f + 0.2f;
 	}
 	@Override
-	public Vec3 getSkyColor(Vec3 pos, float partialTick) {
+	public @NotNull Vec3 getSkyColor(Vec3 pos, float partialTick) {
 		int o;
 		float n;
 		float m;
@@ -133,7 +135,7 @@ public class TimeSync extends ClientLevel {
 			}
 			h = h * (1.0f - (n *= 0.45f)) + 0.8f * n;
 			i = i * (1.0f - n) + 0.8f * n;
-			j = j * (1.0f - n) + 1.0f * n;
+			j = j * (1.0f - n) + n;
 		}
 		return new Vec3(h, i, j);
 

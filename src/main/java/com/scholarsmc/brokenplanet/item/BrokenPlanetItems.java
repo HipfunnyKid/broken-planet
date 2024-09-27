@@ -1,20 +1,15 @@
 package com.scholarsmc.brokenplanet.item;
 
+import static com.scholarsmc.brokenplanet.BrokenPlanet.REGISTRATE;
+
 import com.scholarsmc.brokenplanet.creative.BrokenPlanetItemTab;
-
-import earth.terrarium.adastra.common.tags.ModItemTags;
-
 import com.scholarsmc.brokenplanet.item.models.GasMaskModel;
 import com.simibubi.create.content.equipment.goggles.GogglesItem;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ArmorMaterials;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 
-import static com.scholarsmc.brokenplanet.BrokenPlanet.REGISTRATE;
+import earth.terrarium.adastra.common.tags.ModItemTags;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
 public class BrokenPlanetItems {
 
@@ -36,13 +31,6 @@ public class BrokenPlanetItems {
 			.lang("Gas Mask")
 			.register();
 
-//	public static final Item GAS_MASK = Items.registerItem("gas_mask", (Item)new ArmorItem(ArmorMaterials.TURTLE, ArmorItem.Type.HELMET, new Item.Properties()));
-
-//	public static final ItemEntry<Item> HONEYED_APPLE = REGISTRATE.item("honeyed_apple", Item::new)
-//			.properties(p -> p.food(new FoodProperties.Builder().nutrition(8)
-//					.saturationMod(0.8F)
-//					.build()))
-//			.register();
 	public static void register() {}
 
 }

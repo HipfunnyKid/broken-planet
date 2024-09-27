@@ -8,14 +8,12 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import com.scholarsmc.brokenplanet.block.BrokenPlanetBlocks;
-
-import com.simibubi.create.Create;
-
-import com.simibubi.create.foundation.data.CreateRegistrate;
-
 import org.apache.commons.lang3.mutable.MutableObject;
+import org.jetbrains.annotations.NotNull;
 
+import com.scholarsmc.brokenplanet.block.BrokenPlanetBlocks;
+import com.simibubi.create.Create;
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.TagDependentIngredientItem;
 import com.simibubi.create.foundation.utility.Components;
 import com.tterrag.registrate.util.entry.ItemEntry;
@@ -52,7 +50,7 @@ import net.minecraft.world.level.block.Block;
 
 public class BrokenPlanetItemTab {
 
-	public static final TabInfo BROKEN_PLANET_TAB = register("voxel_tab",
+	public static final TabInfo BROKEN_PLANET_TAB = register(
 			() -> FabricItemGroup.builder()
 					.title(Components.translatable("itemGroup.brokenplanet.voxel_tab"))
 					.icon(() -> BrokenPlanetBlocks.VOXEL_CASING.asStack(1))
@@ -67,8 +65,8 @@ public class BrokenPlanetItemTab {
 //					.build());
 
 
-	private static TabInfo register(String name, Supplier<CreativeModeTab> supplier) {
-		ResourceLocation id = Create.asResource(name);
+	private static TabInfo register(Supplier<CreativeModeTab> supplier) {
+		ResourceLocation id = Create.asResource("voxel_tab");
 		ResourceKey<CreativeModeTab> key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, id);
 		CreativeModeTab tab = supplier.get();
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, key, tab);
@@ -230,7 +228,7 @@ public class BrokenPlanetItemTab {
 		}
 
 		@Override
-		public void accept(ItemDisplayParameters parameters, Output output) {
+		public void accept(@NotNull ItemDisplayParameters parameters, @NotNull Output output) {
 			Predicate<Item> exclusionPredicate = makeExclusionPredicate();
 			List<ItemOrdering> orderings = makeOrderings();
 			Function<Item, ItemStack> stackFunc = makeStackFunc();
