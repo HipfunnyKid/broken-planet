@@ -6,6 +6,7 @@
   "block.brokenplanet.charred_log": "Charred Log",
   "block.brokenplanet.ship_block": "Ship Model",
   "block.brokenplanet.ship_hologram": "Ship Hologram",
+  "block.brokenplanet.spaceship_padding": "Spaceship Padding",
 
   "item.brokenplanet.gas_mask": "Gas Mask"
 }

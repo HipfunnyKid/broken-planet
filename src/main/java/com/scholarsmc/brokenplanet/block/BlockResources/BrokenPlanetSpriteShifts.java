@@ -12,12 +12,15 @@ import com.simibubi.create.foundation.utility.Couple;
 
 public class BrokenPlanetSpriteShifts {
 
-	public static final CTSpriteShiftEntry VOXEL_CASING;
+	public static final CTSpriteShiftEntry
+			VOXEL_CASING = omni("voxel_casing"),
+			SPACESHIP_PADDING = omni("spaceship_padding")
+	;
 
 
 
-	private static CTSpriteShiftEntry omni() {
-		return getCT(AllCTTypes.OMNIDIRECTIONAL, "voxel_casing");
+	private static CTSpriteShiftEntry omni(String name) {
+		return getCT(AllCTTypes.OMNIDIRECTIONAL, name);
 	}
 
 	private static CTSpriteShiftEntry horizontal(String name) {
@@ -53,9 +56,6 @@ public class BrokenPlanetSpriteShifts {
 		return getCT(type, blockTextureName, blockTextureName);
 	}
 
-	static {
-		VOXEL_CASING = omni();
-	}
 
 	public static void register(){}
 }

@@ -21,6 +21,7 @@ public class BrokenPlanet implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(NAME);
 
 	public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(ID);
+	boolean terraform = false;
 
 	public static final Gson GSON = new GsonBuilder().setPrettyPrinting()
 			.disableHtmlEscaping()
