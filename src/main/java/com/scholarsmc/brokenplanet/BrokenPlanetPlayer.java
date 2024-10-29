@@ -23,7 +23,8 @@ public class BrokenPlanetPlayer extends Player {
 	}
 	@Override
 	public void tick() {
-
+		this.gasMaskTick();
+		super.tick();
 	}
 	public boolean isSpectator() {
 		return false;
@@ -33,7 +34,7 @@ public class BrokenPlanetPlayer extends Player {
 		return false;
 	}
 
-	private void turtleHelmetTick() {
+	private void gasMaskTick() {
 		ItemStack itemStack = this.getItemBySlot(EquipmentSlot.HEAD);
 		if (itemStack.is(BrokenPlanetItems.GAS_MASK.asItem()) && !this.isEyeInFluid(FluidTags.WATER)) {
 			this.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));

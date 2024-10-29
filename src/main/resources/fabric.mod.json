@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "brokenplanet",
-  "version": "0.0.5-dev",
+  "version": "0.0.6-dev",
   "name": "Broken Planet",
-  "description": "A mod built around a desolate Earth",
+  "description": "A story-driven mod built around a desolate Earth",
   "authors": [
     "FunnyKid10, Viren K Runner, Goatling Being & Dönermann"
   ],
